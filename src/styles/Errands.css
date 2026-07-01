@@ -1,0 +1,264 @@
+.errands-container {
+  max-width: 480px;
+  margin: 0 auto;
+  background-color: white;
+  min-height: 100vh;
+  padding-bottom: 20px;
+}
+
+.errands-header {
+  background: linear-gradient(135deg, #06b6d4 0%, #7c3aed 100%);
+  color: white;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.errands-header h1 {
+  color: white;
+  font-size: 22px;
+  margin: 0;
+  flex: 1;
+}
+
+.notification-count {
+  position: relative;
+}
+
+.count-badge {
+  background-color: var(--danger-color);
+  color: white;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.errands-list {
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.errand-card {
+  background: white;
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--primary-color);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+  box-shadow: var(--shadow);
+  transition: all 0.2s ease;
+}
+
+.errand-card:active {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.errand-card.accepted {
+  opacity: 0.7;
+}
+
+.errand-card.status-card {
+  border-left-width: 6px;
+}
+
+.errand-card.active-task {
+  border-left-color: var(--primary-color);
+  background-color: rgba(6, 182, 212, 0.06);
+}
+
+.errand-card.completed-task {
+  border-left-color: var(--success-color);
+  background-color: #E8F5E9;
+}
+
+.errand-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  gap: 8px;
+}
+
+.errand-shop {
+  flex: 1;
+}
+
+.shop-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #06b6d4 0%, #7c3aed 100%);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.errand-urgency {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 8px;
+  background-color: var(--light-color);
+  border-radius: 4px;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+  white-space: nowrap;
+}
+
+.errand-body {
+  margin-bottom: 12px;
+}
+
+.errand-item {
+  margin-bottom: 12px;
+}
+
+.errand-item strong {
+  display: block;
+  color: var(--text-color);
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.errand-item p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-light);
+}
+
+.items-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.item-tag {
+  display: inline-block;
+  background-color: var(--light-color);
+  color: var(--text-color);
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.room-number {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.notes {
+  font-size: 13px;
+  color: var(--text-light);
+  line-height: 1.5;
+  margin: 0;
+  font-style: italic;
+}
+
+.errand-timestamp {
+  font-size: 12px;
+  color: var(--text-light);
+  text-align: right;
+  margin-top: 8px;
+}
+
+.accepted-badge {
+  display: block;
+  text-align: center;
+  background-color: #E8F5E9;
+  color: var(--success-color);
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.accepted-info {
+  background-color: rgba(6, 182, 212, 0.06);
+  color: var(--primary-color);
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  margin: 8px 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.completed-info {
+  background-color: #E8F5E9;
+  color: var(--success-color);
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  margin: 8px 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.task-info {
+  background-color: #FFF3CD;
+  color: #856404;
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  margin: 8px 0;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.earned-points {
+  display: block;
+  text-align: center;
+  background: linear-gradient(135deg, #7c3aed 0%, #06b6d4 100%);
+  color: var(--card-bg);
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 14px;
+  margin: 12px 0 0 0;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.empty-state p {
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+.empty-hint {
+  color: var(--text-light);
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .errands-list {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .errand-card {
+    padding: 12px;
+  }
+
+  .errands-header h1 {
+    font-size: 20px;
+  }
+}
